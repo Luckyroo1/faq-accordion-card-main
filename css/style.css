@@ -1,0 +1,119 @@
+body{
+    background: rgb(175,103,224);
+    background: linear-gradient(180deg, rgba(175,103,224,1) 0%, rgba(101,101,224,1) 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.overflow-relative{
+    position: relative;
+}
+
+.card{
+    background-color:hsl(240, 5%, 91%);
+    width: 900px;
+    display: flex;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+}
+
+.img__background{
+    position: absolute;
+    content: url(../images/bg-pattern-desktop.svg);
+    top: 50%;
+    transform:translate(-60%,-58%);
+}
+
+.card-img__container{
+    width: 400px;
+
+}
+
+.card__image-people{
+    position: absolute;
+    content: url(../images/illustration-woman-online-desktop.svg);
+    top: 50%;
+    transform:translate(-20%,-50%);
+}
+.card__image-bloco{
+    position: absolute;
+    content: url(../images/illustration-box-desktop.svg);
+    top: 43%;
+    left:-120px;
+    z-index: 5;
+    display: block;
+}
+
+.card__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card__content>h3{
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-left: 35px;
+}
+
+.card__faq{
+    padding:0 0 0 35px;
+    width: 390px;
+}
+
+.card__faq--iten{
+    list-style: none;
+    margin: 1rem 0;
+    border-bottom: 1px solid hsla(0, 0%, 77%, 0.37)
+}
+
+.card__faq--iten--question{
+    background-color:hsl(240, 5%, 91%);
+    border:none;
+    font-size: 14px;
+    font-family: 'Kumbh Sans', sans-serif;
+    margin-bottom: 10px;
+    transition: 0.4s;
+}
+
+.card__faq__answer_container:hover> .card__faq--iten--question{
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+
+.ativo,.card__faq__answer_container:active> .card__faq--iten--question{
+    font-weight: bolder;
+    color: black;
+}
+
+.card__faq--iten--answer{
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: none;
+
+}
+
+.card__faq--arrow{
+    content: url(../images/icon-arrow-down.svg);
+    height: 9.5px;
+    cursor: pointer;
+    transform: rotate(0deg);
+
+}
+
+.card__faq__answer_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
